@@ -56,6 +56,7 @@ class EventController {
     }
     
     func updateEventAttendedStatus(event: Event) {
+    
         if event.isAttended {
             if let index = unattendedEvents.firstIndex(of: event) {
                 unattendedEvents.remove(at: index)

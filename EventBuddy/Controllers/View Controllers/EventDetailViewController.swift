@@ -11,7 +11,7 @@ class EventDetailViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var eventNameTextField: UITextField!
     @IBOutlet weak var eventToAttendDatePicker: UIDatePicker!
-    
+    @IBOutlet weak var eventCreationLabel: UILabel!
     // MARK: - Properties
     var event: Event?
     
@@ -19,6 +19,7 @@ class EventDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateView()
         self.eventNameTextField.layer.borderWidth = 2
         self.eventNameTextField.layer.borderColor = UIColor.darkGray.cgColor
     }
@@ -36,8 +37,11 @@ class EventDetailViewController: UIViewController {
     
     // MARK: - Helper Functions
     func updateView() {
-        guard let sentEvent = event else { return }
+        if let sentEvent = event {
+            guard let labelChanger = sentEvent.name else { return }
         eventNameTextField.text = sentEvent.name
         eventToAttendDatePicker.date = sentEvent.dateToAttend ?? Date()
+        eventCreationLabel.text = "🎇🎆 \(labelChanger) 🎆🎇"
+        }
     }
 } // END OF CLASS 

@@ -127,7 +127,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="daz-zR-dMg">
-                                <rect key="frame" x="21" y="269" width="373" height="391"/>
+                                <rect key="frame" x="20.5" y="269" width="373" height="391"/>
                                 <color key="tintColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </datePicker>
                         </subviews>
@@ -158,6 +158,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="eventCreationLabel" destination="LA4-PY-iiI" id="I5M-MF-d9F"/>
                         <outlet property="eventNameTextField" destination="Zdz-lr-ykh" id="Q0Q-gY-fTC"/>
                         <outlet property="eventToAttendDatePicker" destination="daz-zR-dMg" id="rNl-wC-6oz"/>
                     </connections>
